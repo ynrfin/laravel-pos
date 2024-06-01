@@ -4,4 +4,6 @@ return [
     App\Providers\AppServiceProvider::class,
     App\Providers\Filament\AdminPanelProvider::class,
     App\Providers\VoltServiceProvider::class,
+    Milon\Barcode\BarcodeServiceProvider::class,
+    Barryvdh\DomPDF\ServiceProvider::class,
 ];
