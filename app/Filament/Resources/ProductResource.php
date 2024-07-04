@@ -35,8 +35,9 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make("name"),
-                Tables\Columns\TextColumn::make("stock"),
+                Tables\Columns\TextColumn::make("name")
+                    ->searchable(),
+                Tables\Columns\TextColumn::make("stock")->searchable(),
                 // buy price is not shown because sometimes people peep
                 // Tables\Columns\TextColumn::make("buy_price"),
                 Tables\Columns\TextColumn::make("sell_price")->label("Price")->money("idr"),
