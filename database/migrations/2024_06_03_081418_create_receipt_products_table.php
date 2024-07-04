@@ -19,6 +19,7 @@ return new class extends Migration
         Schema::create('receipt_products', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('receipt_id');
+            $table->string('name');
             $table->decimal('amount');
             $table->integer('sell_price');
             $table->integer('buy_price');

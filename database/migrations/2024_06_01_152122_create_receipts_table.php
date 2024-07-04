@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('receipts', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->decimal("discount");
+            $table->decimal("discount")->nullable();
             $table->decimal("total_buy_price");
             $table->decimal("total_sell_price");
             $table->timestamps();
